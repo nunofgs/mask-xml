@@ -33,7 +33,7 @@ _(Function)_: Returns a function that will redact values from a given xml string
 ### Example
 
 ```javascript
-var blacklist = ['password', 'secret'];
+var blacklist = ['password', 'username'];
 var maskXml = require('mask-xml')(blacklist);
 
 maskXml(`<xml><password>foo</password><username>bar</username></xml>`);
