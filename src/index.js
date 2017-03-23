@@ -1,24 +1,16 @@
 
 /**
- * Module dependencies.
- */
-
-import { assign } from 'lodash';
-
-/**
  * Export `maskXml` function.
  */
 
-export default (elements, options) => {
-  options = assign({
-    replacement: '--REDACTED--'
-  }, options);
-
+export default (elements, {
+  replacement = '--REDACTED--'
+} = {}) => {
   return value => {
     for (const element of elements) {
       const search = new RegExp(`<${element}>(.+)</${element}>`);
 
-      value = value.replace(search, `<${element}>${options.replacement}</${element}>`);
+      value = value.replace(search, `<${element}>${replacement}</${element}>`);
     }
 
     return value;
