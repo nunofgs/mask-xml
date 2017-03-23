@@ -1,6 +1,6 @@
 {
   "name": "mask-xml",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Redacts values in xml files.",
   "keywords": [
     "deep",
