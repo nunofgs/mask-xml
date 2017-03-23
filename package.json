@@ -21,8 +21,7 @@
     "changelog": "github-changelog-generator --future-release=$npm_package_version --owner=seegno --repo=mask-xml > CHANGELOG.md",
     "lint": "eslint src test",
     "test": "NODE_ENV=test mocha --require should test",
-    "transpile": "rm -rf dist/* && babel src --out-dir dist/src",
-    "version": "npm run changelog --future-release=$npm_package_version && npm run transpile && git add -A CHANGELOG.md dist"
+    "version": "npm run changelog --future-release=$npm_package_version && git add -A CHANGELOG.md"
   },
   "devDependencies": {
     "@uphold/github-changelog-generator": "^0.4.1",
