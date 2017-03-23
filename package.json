@@ -13,7 +13,6 @@
     "url": "https://github.com/seegno/mask-xml/issues"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "main": "dist/src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/seegno/mask-xml.git"
@@ -21,16 +20,11 @@
   "scripts": {
     "changelog": "github_changelog_generator --no-issues --header-label='# Changelog' --future-release=v$npm_config_future_release && sed -i '' -e :a -e '$d;N;2,4ba' -e 'P;D' CHANGELOG.md",
     "lint": "eslint src test",
-    "test": "NODE_ENV=test mocha $npm_package_options_mocha",
+    "test": "NODE_ENV=test mocha --require should test",
     "transpile": "rm -rf dist/* && babel src --out-dir dist/src",
     "version": "npm run changelog --future-release=$npm_package_version && npm run transpile && git add -A CHANGELOG.md dist"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-eslint": "^7.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.16.0",
-    "babel-preset-es2015-node4": "^2.1.0",
-    "babel-register": "^6.3.13",
     "eslint-config-seegno": "^8.0.0",
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-sort-class-members": "^1.0.1",
@@ -41,9 +35,6 @@
   },
   "engines": {
     "node": ">=5.0.0"
-  },
-  "options": {
-    "mocha": "--compilers js:babel-register --recursive --require should"
   },
   "pre-commit": {
     "run": [

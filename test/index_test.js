@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-import maskXml from '../src/index';
+const maskXml = require('../index');
 
 /**
  * Test `maskXml`.
