@@ -47,6 +47,12 @@ maskXml(`<xml><password>foo</password><username>bar</username></xml>`);
 $ npm test
 ```
 
+## Release
+
+```sh
+npm version [<new version> | major | minor | patch] -m "Release %s"
+```
+
 ## License
 
 MIT
