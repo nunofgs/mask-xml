@@ -10,6 +10,24 @@ const maskXml = require('../index');
  */
 
 describe('maskXml()', () => {
+  it('should accept a custom `ignoreCase`', () => {
+    const xml = `
+      <foo>
+        <PaSSWorD>barbiz</PaSSWorD>
+        <password>foobar</password>
+        <secret>bizbaz</secret>
+      </foo>
+    `;
+
+    maskXml(['password', 'secret'], { ignoreCase: true })(xml).should.equal(`
+      <foo>
+        <PaSSWorD>--REDACTED--</PaSSWorD>
+        <password>--REDACTED--</password>
+        <secret>--REDACTED--</secret>
+      </foo>
+    `);
+  });
+
   it('should accept a custom `replacement`', () => {
     const xml = `
       <foo>
