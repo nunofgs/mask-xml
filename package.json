@@ -18,13 +18,14 @@
     "url": "https://github.com/seegno/mask-xml.git"
   },
   "scripts": {
-    "changelog": "github_changelog_generator --no-issues --header-label='# Changelog' --future-release=v$npm_config_future_release && sed -i '' -e :a -e '$d;N;2,4ba' -e 'P;D' CHANGELOG.md",
+    "changelog": "github-changelog-generator --future-release=$npm_package_version --owner=seegno --repo=mask-xml > CHANGELOG.md",
     "lint": "eslint src test",
     "test": "NODE_ENV=test mocha --require should test",
     "transpile": "rm -rf dist/* && babel src --out-dir dist/src",
     "version": "npm run changelog --future-release=$npm_package_version && npm run transpile && git add -A CHANGELOG.md dist"
   },
   "devDependencies": {
+    "@uphold/github-changelog-generator": "^0.4.1",
     "eslint": "^3.18.0",
     "eslint-config-seegno": "^9.0.0",
     "mocha": "^3.1.2",
