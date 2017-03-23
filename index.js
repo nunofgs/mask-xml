@@ -3,7 +3,7 @@
  * Export `maskXml` function.
  */
 
-export default (elements, {
+module.exports = (elements, {
   replacement = '--REDACTED--'
 } = {}) => {
   return value => {
