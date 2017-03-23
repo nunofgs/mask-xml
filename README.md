@@ -4,13 +4,11 @@ Redacts values in xml. Useful when sending data to external logging services suc
 
 ## Status
 
-  [![npm version][npm-image]][npm-url]
-  [![npm downloads][downloads-image]][downloads-url]
-  [![build status][travis-image]][travis-url]
+[![npm version][npm-image]][downloads-url] [![npm downloads][downloads-image]][downloads-url] [![build status][travis-image]][travis-url]
 
 ## Installation
 
-  Install the package via `npm`:
+Install the package via `npm`:
 
 ```
 $ npm install mask-xml
@@ -18,22 +16,23 @@ $ npm install mask-xml
 
 ## Usage
 
-#### Arguments
+### Arguments
 
-  1. `collection` *(Array)*: An array of keys to redact.
-  2. `[options]` *(Object)*: An optional object with the following options:
+1. `collection` _(Array)_: An array of keys to redact.
+2. `[options]` _(Object)_: An optional object with the following options:
 
-| Option        | Default value  | Description                  |
-|---------------|----------------|------------------------------|
-| _replacement_ | _--REDACTED--_ | The default value to replace |
+Option        | Default value  | Description
+------------- | -------------- | ----------------------------
+_ignoreCase_  | false          | Whether to ignore case sensitivity when matching keys
+_replacement_ | _--REDACTED--_ | The default value to replace
 
-#### Returns
+### Returns
 
-  *(Function)*: Returns a function that will redact values from a given xml string.
+_(Function)_: Returns a function that will redact values from a given xml string.
 
-#### Example
+### Example
 
-```js
+```javascript
 var blacklist = ['password', 'secret'];
 var maskXml = require('mask-xml')(blacklist);
 
@@ -44,7 +43,7 @@ maskXml(`<xml><password>foo</password><username>bar</username></xml>`);
 
 ## Tests
 
-```js
+```javascript
 $ npm test
 ```
 
@@ -56,5 +55,5 @@ MIT
 [downloads-url]: https://npmjs.org/package/mask-xml
 [npm-image]: https://img.shields.io/npm/v/mask-xml.svg
 [npm-url]: https://npmjs.org/package/mask-xml
-[travis-image]: https://travis-ci.org/seegno/mask-xml.svg
+[travis-image]: https://img.shields.io/travis/seegno/mask-xml.svg
 [travis-url]: https://travis-ci.org/seegno/mask-xml
