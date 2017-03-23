@@ -8,7 +8,7 @@ module.exports = (elements, {
 } = {}) => {
   return value => {
     for (const element of elements) {
-      const search = new RegExp(`<${element}>(.+)</${element}>`);
+      const search = new RegExp(`<${element}>(.+)</${element}>`, 'g');
 
       value = value.replace(search, `<${element}>${replacement}</${element}>`);
     }

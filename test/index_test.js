@@ -32,6 +32,9 @@ describe('maskXml()', () => {
         <foo>bar</foo>
         <password>foo</password>
         <username>bar</username>
+        <bar>
+          <password>foo</password>
+        </bar>
       </xml>
     `;
 
@@ -40,6 +43,9 @@ describe('maskXml()', () => {
         <foo>bar</foo>
         <password>--REDACTED--</password>
         <username>--REDACTED--</username>
+        <bar>
+          <password>--REDACTED--</password>
+        </bar>
       </xml>
     `);
   });
