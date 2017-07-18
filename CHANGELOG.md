@@ -1,6 +1,7 @@
 # Changelog
 
-## [1.0.1](https://github.com/nunofgs/mask-xml/releases/tag/1.0.1) (2017-03-24)
+## [1.0.2](https://github.com/nunofgs/mask-xml/releases/tag/1.0.2) (2017-07-18)
+- Update ownership [\#8](https://github.com/nunofgs/mask-xml/pull/8) ([nunofgs](https://github.com/nunofgs))
 - Fix linting for source files [\#7](https://github.com/nunofgs/mask-xml/pull/7) ([nunofgs](https://github.com/nunofgs))
 - Fix typo in README.md [\#6](https://github.com/nunofgs/mask-xml/pull/6) ([nunofgs](https://github.com/nunofgs))
 - Add github-changelog-generator@0.4.1 [\#5](https://github.com/nunofgs/mask-xml/pull/5) ([nunofgs](https://github.com/nunofgs))
