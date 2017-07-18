@@ -61,5 +61,5 @@ MIT
 [downloads-url]: https://npmjs.org/package/mask-xml
 [npm-image]: https://img.shields.io/npm/v/mask-xml.svg
 [npm-url]: https://npmjs.org/package/mask-xml
-[travis-image]: https://img.shields.io/travis/seegno/mask-xml.svg
-[travis-url]: https://travis-ci.org/seegno/mask-xml
+[travis-image]: https://img.shields.io/travis/nunofgs/mask-xml.svg
+[travis-url]: https://travis-ci.org/nunofgs/mask-xml
