@@ -8,17 +8,17 @@
     "mask-xml",
     "redact"
   ],
-  "homepage": "https://github.com/seegno/mask-xml",
+  "homepage": "https://github.com/nunofgs/mask-xml",
   "bugs": {
-    "url": "https://github.com/seegno/mask-xml/issues"
+    "url": "https://github.com/nunofgs/mask-xml/issues"
   },
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seegno/mask-xml.git"
+    "url": "https://github.com/nunofgs/mask-xml.git"
   },
   "scripts": {
-    "changelog": "github-changelog-generator --future-release=$npm_package_version --owner=seegno --repo=mask-xml > CHANGELOG.md",
+    "changelog": "github-changelog-generator --future-release=$npm_package_version --owner=nunofgs --repo=mask-xml > CHANGELOG.md",
     "lint": "eslint *.js test",
     "test": "NODE_ENV=test mocha --require should test",
     "version": "npm run changelog --future-release=$npm_package_version && git add -A CHANGELOG.md"
