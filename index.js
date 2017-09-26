@@ -8,6 +8,10 @@ module.exports = (elements, {
   replacement = '--REDACTED--'
 } = {}) => {
   return value => {
+    if (typeof value === 'undefined') {
+      return value;
+    }
+
     for (const element of elements) {
       const search = new RegExp(`<(${element})>(.+)</(${element})>`, `g${ignoreCase ? 'i' : ''}`);
 

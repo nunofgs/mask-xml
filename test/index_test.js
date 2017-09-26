@@ -4,6 +4,7 @@
  */
 
 const maskXml = require('../index');
+const should = require('should');
 
 /**
  * Test `maskXml`.
@@ -42,6 +43,10 @@ describe('maskXml()', () => {
         <secret>*****</secret>
       </foo>
     `);
+  });
+
+  it('should accept undefined', () => {
+    should.not.exist(maskXml(['foo', 'bar'])(undefined));
   });
 
   it('should mask the given xml string', () => {
