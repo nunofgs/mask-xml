@@ -4,6 +4,7 @@
  */
 
 const maskXml = require('../index');
+const should = require('should');
 
 /**
  * Test `maskXml`.
@@ -42,6 +43,12 @@ describe('maskXml()', () => {
         <secret>*****</secret>
       </foo>
     `);
+  });
+
+  it('should skip masking non-strings', () => {
+    [undefined, { biz: 'baz' }, 42].forEach(nonString => {
+      should(maskXml(['foo'])(nonString)).equal(nonString);
+    });
   });
 
   it('should mask the given xml string', () => {
