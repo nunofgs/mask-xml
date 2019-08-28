@@ -1,6 +1,9 @@
 # Changelog
 
-## [1.0.3](https://github.com/nunofgs/mask-xml/releases/tag/1.0.3) (2017-09-27)
+## [v1.0.4](https://github.com/nunofgs/mask-xml/releases/tag/v1.0.4) (2019-08-28)
+- Update to modern standards [\#11](https://github.com/nunofgs/mask-xml/pull/11) ([nunofgs](https://github.com/nunofgs))
+
+## [1.0.3](https://github.com/nunofgs/mask-xml/releases/tag/v1.0.3) (2017-09-27)
 - Skip masking non-strings [\#10](https://github.com/nunofgs/mask-xml/pull/10) ([filipefigcorreia](https://github.com/filipefigcorreia))
 
 ## [1.0.2](https://github.com/nunofgs/mask-xml/releases/tag/v1.0.2) (2017-07-18)
