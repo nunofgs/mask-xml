@@ -3,8 +3,7 @@
  * Module dependencies.
  */
 
-const maskXml = require('../index');
-const should = require('should');
+const maskXml = require('src/index');
 
 /**
  * Test `maskXml`.
@@ -20,7 +19,7 @@ describe('maskXml()', () => {
       </foo>
     `;
 
-    maskXml(['password', 'secret'], { ignoreCase: true })(xml).should.equal(`
+    expect(maskXml(['password', 'secret'], { ignoreCase: true })(xml)).toEqual(`
       <foo>
         <PaSSWorD>--REDACTED--</PaSSWorD>
         <password>--REDACTED--</password>
@@ -37,7 +36,7 @@ describe('maskXml()', () => {
       </foo>
     `;
 
-    maskXml(['password', 'secret'], { replacement: '*****' })(xml).should.equal(`
+    expect(maskXml(['password', 'secret'], { replacement: '*****' })(xml)).toEqual(`
       <foo>
         <password>*****</password>
         <secret>*****</secret>
@@ -47,7 +46,7 @@ describe('maskXml()', () => {
 
   it('should skip masking non-strings', () => {
     [undefined, { biz: 'baz' }, 42].forEach(nonString => {
-      should(maskXml(['foo'])(nonString)).equal(nonString);
+      expect(maskXml(['foo'])(nonString)).toEqual(nonString);
     });
   });
 
@@ -63,7 +62,7 @@ describe('maskXml()', () => {
       </xml>
     `;
 
-    maskXml(['username', 'password'])(xml).should.equal(`
+    expect(maskXml(['username', 'password'])(xml)).toEqual(`
       <xml>
         <foo>bar</foo>
         <password>--REDACTED--</password>
