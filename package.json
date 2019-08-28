@@ -19,14 +19,14 @@
   },
   "scripts": {
     "changelog": "github-changelog-generator --future-release=$npm_package_version --owner=nunofgs --repo=mask-xml > CHANGELOG.md",
-    "lint": "eslint *.js test",
+    "lint": "eslint .",
     "test": "NODE_ENV=test mocha --require should test",
     "version": "npm run changelog --future-release=$npm_package_version && git add -A CHANGELOG.md"
   },
   "devDependencies": {
     "@uphold/github-changelog-generator": "^0.4.1",
-    "eslint": "^3.18.0",
-    "eslint-config-seegno": "^9.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-uphold": "^1.0.0",
     "mocha": "^3.1.2",
     "pre-commit": "^1.0.10",
     "should": "^11.1.1"
