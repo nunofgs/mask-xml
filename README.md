@@ -4,7 +4,7 @@ Redacts values in xml. Useful when sending data to external logging services suc
 
 ## Status
 
-[![npm version][npm-image]][downloads-url] [![npm downloads][downloads-image]][downloads-url] [![build status][travis-image]][travis-url]
+[![npm version][npm-image]][downloads-url] [![npm downloads][downloads-image]][downloads-url] [![build status][workflow-image]][workflow-url]
 
 ## Installation
 
@@ -61,5 +61,5 @@ MIT
 [downloads-url]: https://npmjs.org/package/mask-xml
 [npm-image]: https://img.shields.io/npm/v/mask-xml.svg
 [npm-url]: https://npmjs.org/package/mask-xml
-[travis-image]: https://img.shields.io/travis/nunofgs/mask-xml.svg
-[travis-url]: https://travis-ci.org/nunofgs/mask-xml
+[workflow-image]: https://github.com/nunofgs/mask-xml/workflows/Node%20CI/badge.svg
+[workflow-url]: https://github.com/nunofgs/mask-xml/actions
