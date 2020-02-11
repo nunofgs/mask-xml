@@ -13,9 +13,9 @@ module.exports = (elements, {
     }
 
     for (const element of elements) {
-      const search = new RegExp(`<(${element})>(.+)</(${element})>`, `g${ignoreCase ? 'i' : ''}`);
+      const search = new RegExp(`<(${element})>[^</]*</(${element})>`, `g${ignoreCase ? 'i' : ''}`);
 
-      value = value.replace(search, `<$1>${replacement}</$3>`);
+      value = value.replace(search, `<$1>${replacement}</$2>`);
     }
 
     return value;

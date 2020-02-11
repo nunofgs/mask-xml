@@ -50,6 +50,44 @@ describe('maskXml()', () => {
     });
   });
 
+  it('should mask repeated elements without newlines', () => {
+    const xml = `<xml><users><user><password>foo</password></user><user><password>baz</password></user></users></xml>`;
+
+    expect(maskXml(['password'])(xml)).toEqual(`<xml><users><user><password>--REDACTED--</password></user><user><password>--REDACTED--</password></user></users></xml>`);
+  });
+
+  it('should mask repeated elements with newlines', () => {
+    const xml = `
+      <xml>
+        <users>
+          <user>
+            <password>foo</password>
+            <username>bar</username>
+          </user>
+          <user>
+            <password>baz</password>
+            <username>biz</username>
+          </user>
+        </users>
+      </xml>
+    `;
+
+    expect(maskXml(['username', 'password'])(xml)).toEqual(`
+      <xml>
+        <users>
+          <user>
+            <password>--REDACTED--</password>
+            <username>--REDACTED--</username>
+          </user>
+          <user>
+            <password>--REDACTED--</password>
+            <username>--REDACTED--</username>
+          </user>
+        </users>
+      </xml>
+    `);
+  });
+
   it('should mask the given xml string', () => {
     const xml = `
       <xml>
